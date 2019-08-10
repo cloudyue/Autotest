@@ -1,0 +1,50 @@
+#######################################################
+# 框架版本：python3.6.8 + selenium 3.141.0
+# 作者：岳云鹏
+# 说明：本测试框架针对于固定资产PC端自动化测试定制开发
+#######################################################
+
+# 采用PO模型四层架构
+# 业务层：businessView中封装业务逻辑
+# 数据层：basefunc中方法驱动data数据
+# 页面层：basefunc中方法加载pageView元素
+# 用例层：testSuite中组建执行用例
+
+# 工程架构图
+JCgz_test
+    |
+    |—— basefunc
+    |       |
+    |       |___ basefunction.py    # 公共函数存放文件
+    |
+    |—— businessView    # 业务流程封装类的存放目录
+    |
+    |—— config
+    |       |
+    |       |___ config.ini    # 基础配置信息
+    |       |
+    |       |___ Email_config.ini   # 邮件接收人to,cc配置文件
+    |
+    |—— data    # 数据驱动测试.csv文件的存放目录
+    |
+    |—— file    # 存放上传数据文件的目录
+    |
+    |—— log     # 存放打印日志的目录
+    |
+    |—— main    # unittest批量执行用例入口文件目录
+    |
+    |—— pageView    # 页面元素配置文件的存放目录
+    |
+    |—— report     # html测试报告的存放目录
+    |
+    |—— testSuite   # 测试套的存放目录
+    |
+    |—— util
+            |
+            |___ emaliler.py    # 邮件发送类
+            |
+            |___ HTMLTestRunner_Chart.py    # 测试报告生成类
+            |
+            |___ mylogger.py    # 日志打印生成类
+            |
+            |___ read_ini.py    # 读取.ini配置文件类
