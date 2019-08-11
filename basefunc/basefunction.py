@@ -22,7 +22,7 @@ class BaseOperation:
         self.efg = ReadIni(file_name='local_element.ini')
 
     def OpenSystem(self):
-        """AW: 登录固定资产系统"""
+        """AW: 登录系统"""
         try:
             efg = ReadIni(file_name='loginView.ini')
             url = self.cfg.Read_config('ALL_URL', 'test_url')
