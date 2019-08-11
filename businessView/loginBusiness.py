@@ -20,7 +20,7 @@ class LoginBusiness(BaseOperation):
         self.driver.maximize_window()
 
     def loginAction(self, line):
-        """登录操作"""
+        """登录的操作"""
         data = self.get_csv_data('testLogin.csv', line)
         account = self.get_element('loginView', 'user', self.efg)
         pwd = self.get_element('loginView', 'pwd', self.efg)
