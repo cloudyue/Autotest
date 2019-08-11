@@ -42,7 +42,7 @@ class RunAll(unittest.TestCase):
         # report_name = "Report_" + datetime.datetime.now().strftime("%Y-%m-%d") + ".html"
         report_name = "JC_AutoTest_Report.html"
         file_path = os.path.join(base_path + "/report/" + report_name)
-        report_title = "精臣固定资产自动化测试报告"
+        report_title = "自动化测试报告"
         with open(file_path, 'wb') as test_report:
             runner = HTMLTestRunner_Chart.HTMLTestRunner(stream=test_report, title=report_title, verbosity=2, retry=0,
                                                          save_last_try=True)
