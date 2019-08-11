@@ -16,9 +16,7 @@ class TestMain(unittest.TestCase):
     def setUp(self):
         logger.info('Test case running...')
         self.driver = setDriver()
-        # 业务流引用
         self.busiNess = LoginBusiness(self.driver)
-        # 基础函数引用
         self.baseFunc = BaseOperation(self.driver)
         self.imgs = []
         self.busiNess.openWeb()
