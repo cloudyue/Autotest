@@ -24,7 +24,7 @@ def pre_send_mail(report_name):
     to_addr = cfg.Read_config("Emailer", "To_addr")
     cc_addr = cfg.Read_config("Emailer", "Cc_addr")
     user_list = to_addr.split(',') + cc_addr.split(',')
-    sub = "【请阅】精臣固定资产UI自动化测试报告" + current_time
+    sub = "【请阅】固定资产UI自动化测试报告" + current_time
     user = send_user
     message['Subject'] = sub
     message['From'] = user
@@ -32,7 +32,7 @@ def pre_send_mail(report_name):
     message['Cc'] = cc_addr
     # 添加内容(或图片)到邮件正文中
     mail_content = """
-            <p>您好，以下为精臣固资平台UI自动化测试报告，详情请下载附件报告，推荐使用Chrome浏览器查看!</p>
+            <p>您好，以下为固资平台UI自动化测试报告，详情请下载附件报告，推荐使用Chrome浏览器查看!</p>
             <p>ps:请将两个文件放在同一个目录下，再查看html报告,否则无法查看近十次测试统计图。</p>
             """
     # # 添加邮件正文信息
